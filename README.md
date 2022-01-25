@@ -13,7 +13,7 @@ in your guess, if that character is on the correct position (result is _correct_
 ## Algorithm
 
 Steldrow is a completely deterministic algorithm. It is initialized with two lists of words,
-the common and uncommon ones. These word lists are taken from Wordle page source code and are defined in [wordlist.js](wordlist.js).
+the common and uncommon ones. These word lists are taken from Wordle page source code and are defined in [wordlist.js](src/wordlist.js).
 
 Then, for each round, the following is performed:
 
