@@ -34,6 +34,8 @@ Then, for each round, the following is performed:
 
 In this section, the results will be posted. The script is being run in Safari 15.0.
 
+**Spoiler Alert** Latest Wordle results are on the top. The table also contains **solutions**.
+
 <table>
   <tr>
     <th style="text-align: center">Wordle #</th>
