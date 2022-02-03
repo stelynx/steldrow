@@ -45,6 +45,119 @@ In this section, the results will be posted. The script is being run in Safari 1
     <th style="text-align: center">Guesses</th>
   </tr>
   <tr>
+    <td style="text-align: center">229</td>
+    <td style="text-align: center">02/03/2022</td>
+    <td style="text-align: center">3/6</td>
+    <td style="text-align: center">
+      🟨⬜⬜🟩⬜<br>⬜🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩<br>
+    </td>
+    <td style="text-align: center">
+      <table>
+        <tr>
+          <td style="text-align: center">A</td>
+          <td style="text-align: center">L</td>
+          <td style="text-align: center">E</td>
+          <td style="text-align: center">R</td>
+          <td style="text-align: center">T</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">C</td>
+          <td style="text-align: center">H</td>
+          <td style="text-align: center">A</td>
+          <td style="text-align: center">R</td>
+          <td style="text-align: center">D</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">S</td>
+          <td style="text-align: center">H</td>
+          <td style="text-align: center">A</td>
+          <td style="text-align: center">R</td>
+          <td style="text-align: center">D</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center">228</td>
+    <td style="text-align: center">02/02/2022</td>
+    <td style="text-align: center">5/6</td>
+    <td style="text-align: center">
+      ⬜⬜⬜⬜🟨<br>⬜🟩🟩🟩🟩<br>⬜🟩🟩🟩🟩<br>⬜🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩<br>
+    </td>
+    <td style="text-align: center">
+      <table>
+        <tr>
+          <td style="text-align: center">A</td>
+          <td style="text-align: center">L</td>
+          <td style="text-align: center">E</td>
+          <td style="text-align: center">R</td>
+          <td style="text-align: center">T</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">H</td>
+          <td style="text-align: center">O</td>
+          <td style="text-align: center">I</td>
+          <td style="text-align: center">S</td>
+          <td style="text-align: center">T</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">J</td>
+          <td style="text-align: center">O</td>
+          <td style="text-align: center">I</td>
+          <td style="text-align: center">S</td>
+          <td style="text-align: center">T</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">F</td>
+          <td style="text-align: center">O</td>
+          <td style="text-align: center">I</td>
+          <td style="text-align: center">S</td>
+          <td style="text-align: center">T</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">M</td>
+          <td style="text-align: center">O</td>
+          <td style="text-align: center">I</td>
+          <td style="text-align: center">S</td>
+          <td style="text-align: center">T</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center">227</td>
+    <td style="text-align: center">02/01/2022</td>
+    <td style="text-align: center">3/6</td>
+    <td style="text-align: center">
+      ⬜⬜🟨⬜🟨<br>🟨⬜⬜🟨🟩<br>🟩🟩🟩🟩🟩<br>
+    </td>
+    <td style="text-align: center">
+      <table>
+        <tr>
+          <td style="text-align: center">A</td>
+          <td style="text-align: center">L</td>
+          <td style="text-align: center">E</td>
+          <td style="text-align: center">R</td>
+          <td style="text-align: center">T</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">S</td>
+          <td style="text-align: center">U</td>
+          <td style="text-align: center">I</td>
+          <td style="text-align: center">T</td>
+          <td style="text-align: center">E</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">T</td>
+          <td style="text-align: center">H</td>
+          <td style="text-align: center">O</td>
+          <td style="text-align: center">S</td>
+          <td style="text-align: center">E</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
     <td style="text-align: center">226</td>
     <td style="text-align: center">01/31/2022</td>
     <td style="text-align: center">3/6</td>
