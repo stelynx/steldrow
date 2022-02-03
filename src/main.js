@@ -82,15 +82,15 @@ function sortedWordlistByCharacterOccurence(wordlist, occurences) {
 function filterWords(wordList, results, guess) {
   let filteredWords = [...wordList];
   for (let i = 0; i < 5; i++) {
-    if (results[i] == correct) {
-      filteredWords = filteredWords.filter(word => word[i] == guess[i]);
-    } else if (results[i] == present) {
+    if (results[i] === correct) {
+      filteredWords = filteredWords.filter(word => word[i] === guess[i]);
+    } else if (results[i] === present) {
       filteredWords = filteredWords.filter(
         word => word[i] != guess[i] && word.indexOf(guess[i]) != -1,
       );
     } else {
       filteredWords = filteredWords.filter(
-        word => word.indexOf(guess[i]) == -1,
+        word => word.indexOf(guess[i]) === -1,
       );
     }
   }
@@ -117,7 +117,7 @@ function typeWord(word) {
  * @param {number} rowIndex the last round number
  * @returns array of length 5 with evaluations
  */
-function getResultsInRow(rowIndex) {
+function getResultsFromDOMInRow(rowIndex) {
   const charNodeList = document
     .getElementsByTagName('game-app')[0]
     .shadowRoot.querySelector('game-theme-manager')
@@ -134,9 +134,56 @@ function getResultsInRow(rowIndex) {
 }
 
 /**
- * Main algorithm.
+ * Calculates results given `guess` and `seekWord`.
+ *
+ * It first calculates character occurences in the `seekWord`.
+ * It then assigns `correct` results and updates character
+ * occurences. After that, it loops over the `guess` word again
+ * and assigns `present` results if the character has not yet been
+ * exhausted from character occurences. This way it prevent from
+ * signaling three E's for example if there is only one E present.
+ *
+ * @param {string} guess algorithm's guess
+ * @param {string} seekWord a word the algorithm is seeking
+ * @returns results as they would have been obtained from DOM
  */
-async function main() {
+function getResultsForSeekWord(guess, seekWord) {
+  const seekWordCharOccurences = getCharacterOccurences([seekWord]);
+
+  const results = [absent, absent, absent, absent];
+  for (let i = 0; i < 5; i++) {
+    if (guess[i] === seekWord[i]) {
+      results[i] = correct;
+      seekWordCharOccurences[guess[i]]--;
+      continue;
+    }
+  }
+  for (let i = 0; i < 5; i++) {
+    if (results[i] === correct) continue;
+
+    if (seekWord.indexOf(guess[i]) === -1) {
+      continue;
+    }
+    if (seekWordCharOccurences[guess[i]] > 0) {
+      seekWordCharOccurences[guess[i]]--;
+      results[i] = present;
+      continue;
+    }
+  }
+
+  return results;
+}
+
+/**
+ * Main algorithm.
+ *
+ * In case `seekWord` is not provided, the algorithm interacts with
+ * DOM and plays the actual game. In case a `seekWord` is given,
+ * it seeks it.
+ *
+ * @param {string} seekWord a word the algorithm should seek
+ */
+async function main(seekWord) {
   // `commonWords` and `uncommonWords` must be predefined.
   let words = commonWords;
   let words1 = uncommonWords;
@@ -146,17 +193,22 @@ async function main() {
     words = sortedWordlistByCharacterOccurence(words, charOccurences);
 
     const guess = words[0];
-    typeWord(guess);
-    const results = getResultsInRow(round);
+    let results;
+    if (seekWord === undefined) {
+      typeWord(guess);
+      results = getResultsFromDOMInRow(round);
+      await sleep(3000);
+    } else {
+      results = getResultsForSeekWord(guess, seekWord);
+      console.log(`${guess} -> ${results}`);
+    }
 
-    await sleep(3000);
-
-    if (results.filter(x => x == correct).length == 5) break;
+    if (results.filter(x => x === correct).length === 5) break;
 
     words = filterWords(words, results, guess);
     words1 = filterWords(words1, results, guess);
 
-    if (words.length == 0) {
+    if (words.length === 0) {
       words = words1;
     }
   }
