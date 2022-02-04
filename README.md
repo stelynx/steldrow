@@ -45,6 +45,46 @@ In this section, the results will be posted. The script is being run in Safari 1
     <th style="text-align: center">Guesses</th>
   </tr>
   <tr>
+    <td style="text-align: center">230</td>
+    <td style="text-align: center">02/04/2022</td>
+    <td style="text-align: center">4/6</td>
+    <td style="text-align: center">
+      🟨🟩🟩⬜🟩<br>⬜🟩🟩🟩🟩<br>⬜🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩<br>
+    </td>
+    <td style="text-align: center">
+      <table>
+        <tr>
+          <td style="text-align: center">A</td>
+          <td style="text-align: center">L</td>
+          <td style="text-align: center">E</td>
+          <td style="text-align: center">R</td>
+          <td style="text-align: center">T</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">B</td>
+          <td style="text-align: center">L</td>
+          <td style="text-align: center">E</td>
+          <td style="text-align: center">A</td>
+          <td style="text-align: center">T</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">C</td>
+          <td style="text-align: center">L</td>
+          <td style="text-align: center">E</td>
+          <td style="text-align: center">A</td>
+          <td style="text-align: center">T</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">P</td>
+          <td style="text-align: center">L</td>
+          <td style="text-align: center">E</td>
+          <td style="text-align: center">A</td>
+          <td style="text-align: center">T</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
     <td style="text-align: center">229</td>
     <td style="text-align: center">02/03/2022</td>
     <td style="text-align: center">3/6</td>
